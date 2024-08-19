@@ -1,16 +1,79 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(#b96fa1, #5a3f8c);
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
+        .weather-container {
+            text-align: center;
+        }
+
+        .selected-location {
+            font-size: 25px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .weather-block {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .weather-item {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .item-temp {
+            font-size: 20px;
+        }
+
+        .item-temp-number1 {
+            font-weight: 600;
+        }
+
+        /* Responsive design for wider screens */
+        @media (min-width: 900px) {
+            .weather-block {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+<div class="weather-container">
+    <div class="selected-location">New York, NY</div>
+    <div class="weather-block">
+        <div class="weather-item">
+            <div class="item-temp"><span class="item-temp-number1">15</span>/25°C</div>
+        </div>
+        <div class="weather-item">
+            <div class="item-temp"><span class="item-temp-number1">18</span>/28°C</div>
+        </div>
+        <div class="weather-item">
+            <div class="item-temp"><span class="item-temp-number1">20</span>/30°C</div>
+        </div>
+    </div>
+</div>
 
 </body>
-
 </html>
